@@ -19,7 +19,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
     <style>
-        #account_container{
+        #account_container {
             width: 600px;
         }
     </style>
@@ -33,9 +33,13 @@
             <div class="flex flex-col ml-10">
                 <h1 class="text-2xl font-semibold">{{showFullname}}</h1>
                 <p><span class="text-blue-600">{{showEmail}}</span><span> - {{showTitle}}</span></p>
-                <p class="text-sm text-gray-400 mt-2">Avatar by <span class="text-gray-700">62130500093's image</span>. Or upload your own....</p>
-                <div @dragover.prevent @drop.prevent="addFile" class="flex flex-col mt-3 items-center justify-center bg-gray-100 border-2 border-dashed border-gray-400 w-80 h-20 text-gray-400">
-                        <div><h1 id="dropbox_text">Drop your own image files here.</h1></div>     
+                <p class="text-sm text-gray-400 mt-2">Avatar by <span class="text-gray-700">62130500093's image</span>.
+                    Or upload your own....</p>
+                <div @dragover.prevent @drop.prevent="addFile"
+                    class="flex flex-col mt-3 items-center justify-center bg-gray-100 border-2 border-dashed border-gray-400 w-80 h-20 text-gray-400">
+                    <div>
+                        <h1 id="dropbox_text">Drop your own image files here.</h1>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,7 +57,8 @@
                     <div id="account_container" class="text-large">
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="username">Username</label>
-                            <input class="border w-80" id="username" type="text" v-model.lazy="username" name="username">
+                            <input class="border w-80" id="username" type="text" v-model.lazy="username"
+                                name="username">
                         </div>
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="email">Email <span class="text-red-500 font-bold">*</span></label>
@@ -61,11 +66,13 @@
                         </div>
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="password">Password</label>
-                            <input class="border w-80" id="password" type="password" v-model.lazy="password" name="password">
+                            <input class="border w-80" id="password" type="password" v-model.lazy="password"
+                                name="password">
                         </div>
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="fullname">Full name <span class="text-red-500 font-bold">*</span></label>
-                            <input class="border w-80" id="fullname" type="text" v-model.lazy="fullname" name="fullname">
+                            <input class="border w-80" id="fullname" type="text" v-model.lazy="fullname"
+                                name="fullname">
                         </div>
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="title">Title</label>
@@ -73,11 +80,12 @@
                         </div>
                         <div class="flex flex-row mt-3 ml-3 mr-20 justify-between">
                             <label for="language">Language</label>
-                            <select id="language" class="border w-80" v-model.lazy="chosenlanguage" name="chosenlanguage">
-                                    <option v-for="language in languages" :value="language.lang_id">
-                                        {{language.lang_name}}
-                                    </option>
-                                </select>
+                            <select id="language" class="border w-80" v-model.lazy="chosenlanguage"
+                                name="chosenlanguage">
+                                <option v-for="language in languages" :value="language.lang_id">
+                                    {{language.lang_name}}
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <input class="mt-3 ml-3" type="submit" value="Submit">

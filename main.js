@@ -77,12 +77,12 @@ const app = Vue.createApp({
         ,
         addFile(e) {
             let dropfile = e.dataTransfer.files[0];
-           let reader = new FileReader();
-           reader.readAsDataURL(dropfile);
-           reader.onloadend = function(){
-               let showImage = document.getElementById("showImage");
-               showImage.src = reader.result;
-           }
+            let reader = new FileReader();
+            reader.readAsDataURL(dropfile);
+            reader.onloadend = function () {
+                let showImage = document.getElementById("showImage");
+                showImage.src = reader.result;
+            }
             alert("Your image profile is updated successfully.");
         }
     }
